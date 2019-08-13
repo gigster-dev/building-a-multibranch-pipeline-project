@@ -12,7 +12,7 @@ pipeline {
     stages {
          stage('Install dependencies') {
             steps {
-               sh 'npm install'
+               args '-u root:sudo 'npm install''
             }
          }
         stage('Test') {
