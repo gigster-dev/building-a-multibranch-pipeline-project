@@ -11,13 +11,12 @@ pipeline {
     tools {nodejs "node"}
     stages {
          
-      //  stage('Install dependencies') {
-      //       steps {
-      //          sh 'npm install'
-      //          sh 'npm audit fix'
-      //   } 
-      // }
-        
+       stage('Install dependencies') {
+           steps {
+               sh 'npm install'
+               sh 'npm audit fix'
+            } 
+       }
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
