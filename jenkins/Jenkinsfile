@@ -13,8 +13,8 @@ pipeline {
          
        stage('Install dependencies') {
            steps {
-               sudo -i sh 'npm install'
-               sudo -i sh 'npm audit fix'
+                sh sudo -i 'npm install'
+                sh sudo -i 'npm audit fix'
             } 
        }
         stage('Test') {
